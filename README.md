@@ -11,5 +11,5 @@ $ npm install kud-video-tag-debugger
 ```javascript
 var VideoDebugger = require('kud-video-tag-debugger')
 
-VideoDebugger.debug(document.querySelector('.an-example'))
+VideoDebugger.on( document.querySelector('.an-example'), 'My video did %s.' )
 ```

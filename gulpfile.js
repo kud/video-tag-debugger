@@ -19,12 +19,12 @@ gulp.task('watch', ['server', 'compile'], function() {
 
   gulp.watch( [
     'src/**/*.js',
-    'test/index.js'
+    'tests/index.js'
   ], ['scripts'])
 
   gulp.watch( [
     'tests/**/*',
-     '!test/index.js'
+     '!tests/index.js'
   ], ['static'])
 
 })

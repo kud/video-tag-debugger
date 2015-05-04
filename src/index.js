@@ -1,7 +1,10 @@
 var _ = require('lodash')
 
 module.exports = {
-  debug: function( video ) {
+
+  on: function( video, message ) {
+    var msg = message || "🎬 has triggered `%s`."
+
     _.each([
         'abort'
       , 'canplay'
@@ -28,10 +31,11 @@ module.exports = {
       , 'waiting'
       ], function( item ) {
         video.addEventListener( item, function() {
-          console.info( "🎬 has triggered `%s`.", item)
+          console.info( msg, item )
         })
     })
   }
+
 }
 
 
